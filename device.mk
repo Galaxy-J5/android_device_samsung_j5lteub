@@ -23,12 +23,6 @@ TARGET_SCREEN_WIDTH := 720
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/j5lteub/overlay
 
-LOCAL_OVERRIDES_PACKAGES := \
-    libnfc_nci \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
-
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath2=/system/lib/libsec-ril-dsds.so
 

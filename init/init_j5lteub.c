@@ -62,9 +62,9 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_get("ro.bootloader", bootloader);
 
     if (strstr(bootloader, "J500M")) {
-        /* SM-J500M dual sim variant */
-        property_set("ro.build.fingerprint", "samsung/j5lteub/j5lte:5.1.1/LMY48B/J500MUBU1AOH6:user/release-keys");
-        property_set("ro.build.description", "j5lteub-user 5.1.1 LMY48B J500MUBU1AOH6 release-keys");
+        /* SM-J500M */
+        property_set("ro.build.fingerprint", "samsung/j5lteub/j5lte:5.1.1/LMY48B/J500MUBU1APD1:user/release-keys");
+        property_set("ro.build.description", "j5lteub-user 5.1.1 LMY48B J500MUBU1APD1 release-keys");
         property_set("ro.product.model", "SM-J500M");
         property_set("ro.product.device", "j5lte");
 

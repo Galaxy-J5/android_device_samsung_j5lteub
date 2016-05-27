@@ -23,7 +23,6 @@ TARGET_SCREEN_WIDTH := 720
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/j5lteub/overlay
 
-
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.multisim.simslotcount=2 \
     persist.radio.multisim.config=dsds \

@@ -47,11 +47,6 @@ TARGET_OTA_ASSERT_DEVICE := j5lte
 TARGET_KERNEL_CONFIG := cyanogenmod_j5nlte_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/j5lte
 
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.multisim.simslotcount=2 \
-    persist.radio.multisim.config=dsds \
-    rild.libpath2=/system/lib/libsec-ril-dsds.so
-
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm

@@ -24,7 +24,7 @@
 -include device/samsung/j5-common/BoardConfigCommon.mk
 
 # Inherit from the proprietary version
--include vendor/samsung/j5ltexx/BoardConfigVendor.mk
+-include vendor/samsung/j5lteub/BoardConfigVendor.mk
 
 # Partition sizes
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488

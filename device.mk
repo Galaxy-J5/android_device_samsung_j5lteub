@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras \
-    nfc_nci.pn54x.default
+    nfc_nci.pn54x.msm8916
 
 # Permissions
 PRODUCT_COPY_FILES += \

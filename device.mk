@@ -23,6 +23,20 @@ TARGET_SCREEN_WIDTH := 720
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/j5lteub/overlay
 
+# NFC packages
+PRODUCT_PACKAGES += \
+    libnfc_nci \
+    NfcNci \
+    Tag \
+    com.android.nfc_extras \
+    nfc_nci.pn54x.default
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
+
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.multisim.simslotcount=2 \
     persist.radio.multisim.config=dsds \

@@ -25,6 +25,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/j5lteub/overlay
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    libnfc \
     libnfc_nci \
     NfcNci \
     Tag \

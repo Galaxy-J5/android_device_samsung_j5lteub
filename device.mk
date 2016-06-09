@@ -25,7 +25,6 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/j5lteub/overlay
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    libnfc \
     nfc_nci.bcm2079x.default \
     libnfc_nci \
     NfcNci \

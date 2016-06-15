@@ -37,40 +37,40 @@
 #include "init_msm.h"
 
 void init_dsds() {
-    property_set("ro.multisim.set_audio_params", "true");
-    property_set("ro.multisim.simslotcount", "2");
-    property_set("persist.radio.multisim.config", "dsds");
+   property_set("ro.multisim.set_audio_params", "true");
+   property_set("ro.multisim.simslotcount", "2");
+   property_set("persist.radio.multisim.config", "dsds");
 }
 
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
+   char platform[PROP_VALUE_MAX];
+   char bootloader[PROP_VALUE_MAX];
+   char device[PROP_VALUE_MAX];
+   char devicename[PROP_VALUE_MAX];
+   int rc;
 
-    UNUSED(msm_id);
-    UNUSED(msm_ver);
-    UNUSED(board_type);
+   UNUSED(msm_id);
+   UNUSED(msm_ver);
+   UNUSED(board_type);
 
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
-        return;
+   rc = property_get("ro.board.platform", platform);
+   if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+      return;
 
-    property_get("ro.bootloader", bootloader);
+   property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "J500M")) {
-        /* SM-J500M */
-        property_set("ro.build.fingerprint", "samsung/j5lteub/j5lte:5.1.1/LMY48B/J500MUBU1APD1:user/release-keys");
-        property_set("ro.build.description", "j5lteub-user 5.1.1 LMY48B J500MUBU1APD1 release-keys");
-        property_set("ro.product.model", "SM-J500M");
-        property_set("ro.product.device", "j5lte");
+   if (strstr(bootloader, "J500M")) {
+      /* SM-J500M */
+      property_set("ro.build.fingerprint", "samsung/j5lteub/j5lte:5.1.1/LMY48B/J500MUBU1APD1:user/release-keys");
+      property_set("ro.build.description", "j5lteub-user 5.1.1 LMY48B J500MUBU1APD1 release-keys");
+      property_set("ro.product.model", "SM-J500M");
+      property_set("ro.product.device", "j5lte");
 
-        init_dsds();
-    }
+      init_dsds();
+   }
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+   property_get("ro.product.device", device);
+   strlcpy(devicename, device, sizeof(devicename));
+   INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
 }

@@ -1,2 +1,3 @@
+add_lunch_combo cm_j5lteub-user
 add_lunch_combo cm_j5lteub-userdebug
 add_lunch_combo cm_j5lteub-eng

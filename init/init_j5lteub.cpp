@@ -58,8 +58,8 @@ void vendor_load_properties()
 
    if (strstr(bootloader, "J500M")) {
       /* SM-J500M */
-      property_set("ro.build.fingerprint", "samsung/j5lteub/j5lte:5.1.1/LMY48B/J500MUBU1APD1:user/release-keys");
-      property_set("ro.build.description", "j5lteub-user 5.1.1 LMY48B J500MUBU1APD1 release-keys");
+      property_set("ro.build.fingerprint", "samsung/j5lteub/j5lte:6.0.1/MMB29M/J500MUBU1BPH1:user/release-keys");
+      property_set("ro.build.description", "j5lteub-user 6.0.1 MMB29M J500MUBU1BPH1 release-keys");
       property_set("ro.product.model", "SM-J500M");
       property_set("ro.product.device", "j5lte");
 
